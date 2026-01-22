@@ -184,9 +184,6 @@ class _ProfileCheckGuardState extends State<ProfileCheckGuard> {
       listener: (context, state) {
         if (state is ProfileLoaded && state.profile == null) {
           Navigator.pushReplacementNamed(context, '/seller/profile-setup');
-        } else if (state is ProfileCreated) {
-          // Profile just created, reload to show dashboard
-          Navigator.pushReplacementNamed(context, '/seller/dashboard');
         }
       },
       builder: (context, state) {

@@ -92,6 +92,9 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                 backgroundColor: Colors.red,
               ),
             );
+          } else if (state is ProfileCreated) {
+            // Profile created successfully, navigate to dashboard
+            Navigator.pushReplacementNamed(context, '/seller/dashboard');
           }
         },
         builder: (context, state) {
